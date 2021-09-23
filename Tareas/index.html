@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Semana32</title>
+    <style>
+
+    body{
+            background-image: url("54336.png");
+            background-size: cover;
+        }
+
+
+        .title{
+    position: absolute;
+    font-family: sans-serif;
+    top: 10%;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+    background: none;
+    height: 20%;
+    font-size: 500%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: red;
+}
+.gr{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    top: 30%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 3px;
+    opacity: 1;
+}
+.gr .int{
+    width: 35%;
+    height: 60%;
+    top: 100%;
+    margin: auto;
+    font-size: 125%;
+    opacity: 1;
+
+
+}
+
+.gr .m1{
+    position: absolute;
+    top: -40%;
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+    border:  black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lime;
+    color: black;
+    left: 40%;
+    font-size: 300%;
+}
+.gr .m2{
+    position: absolute;
+    top: 20%;
+    width: 15%;
+    height: 20%;
+    border-radius: 10%;
+    border:  white solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lime;
+    color: black;
+    left: 10%;
+    font-size: 300%;
+}
+.gr .m3{
+    position: absolute;
+    top: 60%;
+    width: 15%;
+    height: 20%;
+    border-radius: 10%;
+    border:  white solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lime;
+    color: black;
+    left: 10%;
+    font-size: 300%;
+
+
+
+}
+.q1{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    top: 30%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 3px;
+    opacity: 0;
+}
+.qt{
+    position: absolute;
+    top: 5%;
+    color: red;
+    left: 50px;
+}
+.p1{
+    position: absolute;
+    top: 25%;
+    text-align: left;
+    font-size: 150%;
+}
+.p2
+{
+    position: absolute;
+    top: 30%;
+    font-size: 150%;
+    opacity: 0;
+    left: 0%;
+    width: 40%;
+}
+.m{
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    background: black;
+    color: white;
+    left: 90%;
+    top: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.e{
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    background: black;
+    color: white;
+    left: 80%;
+    top: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cl{
+    position: absolute;
+    left: 173%;
+    top: -40%;
+    color: red;
+    background: transparent;
+    opacity: 0;
+}
+
+.neo{
+            position: absolute;
+            top: 390px;
+            height: 300px;
+            width: 470px;
+            font-size: 50px;
+            left: 580px;
+            font-family: fantasy;
+             background-image: url("logo.png");
+             opacity: 0;
+        }
+
+        .ce{
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            width: 30%;
+            height: 30%;
+            background: cyan;
+            color: white;
+            font-size: 250%;
+            opacity: 0;
+        }
+
+   .a{
+            position: absolute;
+            top: 25px;
+            height: 500px;
+            width: 500px;
+            font-size: 50px;
+            background: lightgoldenrodyellow;
+            left: 580px;
+            font-family: fantasy;
+            border-radius: 10px;   
+            opacity: 0;      
+            color: black
+    </style>
+</head>
+<body onkeypress="tecla()">
+  
+<div></div>
+<div class="gr" id="gra">
+    <div class="int"></div>
+    <div class="m1" onclick="que()">Neosistemas</div>
+    <div class="m2" onclick="da()">Eje 1</div>
+    <div class="m3" onclick="de()">Eje 2</div>
+    <div class="a" id="ver" onmousemove="posi(event)"></div>
+   <div class="ce" id="cua"></div>
+    </div>
+<div class="neo" id="que1" >
+
+   
+   
+    <form>
+        
+
+
+    </form>
+<div id="reg" >
+<div class="titulotres" onclick="suma(); "onclick="calcu();" ><center></div></center>
+<div class="tituloresta" onclick="resta(); "onclick="calcu();" ><center></div></center>
+<div class="titulomulti" onclick="multi(); "onclick="calcu();" ><center></div></center>
+<div class="titulodivi" onclick="divi(); "onclick="calcu();" ><center></div></center>
+<div class="tituloigual" onclick="igual(); "onclick="calcu();" ><center></div></center>
+<center> <div class="titulocuatros"  id="respuesta">  </div> </center>
+
+
+    <div class="p2" id="te2"></div>
+    <div class="cl"  onclick="clo()">Close</div>
+</div>
+
+<script type="text/javascript">
+
+    function que(){ 
+        clearInterval(crono);
+        gra.style.opacity=1;
+        reg.style.opacity=1;
+        que1.style.opacity=1;
+        setTimeout(th,1000);   
+    }
+     function th(){
+        que1.style.opacity=0;
+     }
+     
+     function da(){ 
+        gra.style.opacity=1;
+        reg.style.opacity=1;
+        ver.style.opacity=1;
+        setTimeout(tp,5000);
+    }
+    function tp() {
+        ver.style.opacity=0;
+    }
+    
+
+
+    function clo() {
+        te2.style.opacity=1;
+        que1.style.opacity=0;
+        gra.style.opacity=1;
+    }
+
+      function posi(event){
+       x=event.clientX;
+       y=event.clientY;
+       ver.innerHTML= x+""+y;
+    }
+
+    x=0;
+    function contar()
+    {
+        x=x+1;
+        cua.innerHTML="   Cronometro: "+x;
+        console.log(x);
+        if(x==6)
+        {
+            clearInterval(crono);
+            cua.innerHTML="Termine";
+            cua.style.background="blue";
+        }
+        if (x%2==0) {
+            cua.style.background="lime";
+        }
+        else{
+            cua.style.background="cyan";
+        }
+    }
+    crono=setInterval(contar,1000);
+
+     function de(){ 
+        gra.style.opacity=1;
+        reg.style.opacity=1;
+        cua.style.opacity=1;
+        setTimeout(dt,7000);
+    }
+    function dt(){
+        cua.style.opacity=0;
+    }
+
+</script>
+</body>
+</body>
+</html>
