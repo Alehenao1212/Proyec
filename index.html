@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trabajo</title>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background-color: #F4FA58;
+        }
+        .titulo{
+            position: absolute;
+            top: 25px;
+            height: 75px;
+            width: 500px;
+            font-size: 50px;
+            background: #FA5858;
+            left: 400px;
+            font-family: forte;
+            
+        }
+        .sum{
+            position: absolute;
+            top: 150px;
+            width: 100px;
+            height: 75px;
+            background:#58FAF4;
+            font-size: 50px;
+            left: 350px;
+        }
+        .res{
+            position: absolute;
+            top: 150px;
+            width: 100px;
+            height: 75px;
+            background:#FE2E2E;
+            font-size: 50px;
+            left: 550px;
+        }
+        .mul{
+            position: absolute;
+            top: 150px;
+            width: 100px;
+            height: 75px;
+            background:#82FA58;
+            font-size: 50px;
+            left: 750px;
+        }
+        .div{
+            position: absolute;
+            top: 150px;
+            width: 100px;
+            height: 75px;
+            background:#F781F3;
+            font-size: 50px;
+            left: 950px;
+        }
+        .resp{
+            position: absolute;
+            top: 350px;
+            width: 300px;
+            height: 100px;
+            background:#F7BE81;
+            font-family: Lato;
+            font-size: 50px;
+            left: 550px;
+        }
+        .n1{
+            position: absolute;
+            top: 250px;
+            left: 50px;
+            background-color: #A4A4A4;
+            font-size: 36px;
+            width: 150px;
+        }
+        .n2{
+            position: absolute;
+            top: 350px;
+            left: 50px;
+            background-color: #F5A9A9;
+            font-size: 36px;
+            width: 150px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+
+<input type="text" id="numero1" class="n1"  placeholder="numero1">
+<br>
+<br>
+
+
+<input type="text" id="numero2" class="n2" placeholder="numero2">
+</form>
+<div class="sum" onclick="suma();" id="suma"><center>+</div></center>
+<div class="res" onclick="resta();" id="resta"><center>-</div></center>
+<div class="mul" onclick="multiplicacion();" id="multiplicacion"><center>*</div></center>
+<div class="div" onclick="division();" id="division"><center>÷</div></center>
+<div class="titulo"><center>Calculadora</div></center>
+<div class="resp" onclick="respu();" id="respuesta"></div>
+
+
+
+<script>
+    function suma()
+    {
+        x=Number(numero1.value)+Number(numero2.value);
+        console.log(x);
+        respuesta.innerHTML="La suma es:"+x;
+    }
+    function resta()
+    {
+        x=Number(numero1.value)-Number(numero2.value);
+        console.log(x);
+        respuesta.innerHTML="La resta es:"+x;
+    }
+function multiplicacion()
+    {
+        x=Number(numero1.value)*Number(numero2.value);
+        console.log(x);
+        respuesta.innerHTML="La multiplicacion es:"+x;
+    }
+function division()
+    {
+        x=Number(numero1.value)/Number(numero2.value);
+        console.log(x);
+        respuesta.innerHTML="La division es:"+x;
+
+    }
+    
+    
+    
+</script>
+</body>
+</html>
