@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Semana 33</title>
+	<style>
+
+	body{
+		background-image: url("artistic.jpg");
+        background-size: cover;
+	}
+		.a{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    border: black solid 3px;
+    opacity: 1;
+    background: orange;
+    font-family: Old English Text MT;
+    font-size: 100px;
+    background-image: url(tumblr_23c4e63d5e665af885ac24186f832d70_1e1cf967_1280.jpg);
+		}
+
+        .b{
+            position: absolute;
+            top: 200px;
+            left: 120px;
+            background-color: lightgoldenrodyellow;
+            font-size: 43px;
+            width: 250px;
+            height: 100px;
+            border-radius: 15px; 
+            font-family: Magneto;
+            padding-left:18px ;
+            padding-top:20px ;
+            padding-bottom:20px ;
+            box-sizing: border-box;
+            opacity: 1;
+            z-index: 100px;
+            border: black solid 3px;
+             
+        }
+
+        .c{
+            position: absolute;
+            top: 350px;
+            left: 120px;
+            background-color: lightgoldenrodyellow;
+            font-size: 43px;
+            width: 250px;
+            height: 100px;
+            border-radius: 15px; 
+            font-family: Magneto;
+            padding-left:40px ;
+            padding-top:20px ;
+            padding-bottom:20px ;
+            box-sizing: border-box;
+            z-index: 100px;
+            opacity: 1;
+            border: black solid 3px;
+            
+        }
+
+        .d{
+    position: absolute;
+    width: 310px;
+    height: 100px;
+    top: 500px;
+    left: 120px;
+    display: flex;
+    border: black solid; 3px;
+    opacity: 1;
+    background: orange;
+    font-family: Berlin Sans FB Demi;
+    font-size: 80px;
+    background-image: url(original.jpg);
+    padding-left: 50px;
+		}
+
+		.e{
+    position: absolute;
+    width: 450px;
+    height: 606px;
+    top: 50px;
+    left: 600px;
+    display: flex;
+    border: black solid 3px;
+    background: orange;
+    font-family: Old English Text MT;
+    font-size: 100px;
+    background-image: url(original.jpg);
+    padding-left: 100px;
+    box-sizing: border-box;
+    
+		}
+
+        .botonjugar{
+            position: absolute;
+            top: 20px;
+            left: 1400px;
+            background-color: lightgoldenrodyellow;
+            font-size: 60px;
+            width: 250px;
+            height: 100px;
+            border-radius: 20px; 
+            font-family: Old English Text MT;
+            padding-left:51px ;
+            padding-top:10px ;
+            padding-bottom:20px ;
+            box-sizing: border-box;
+            background-image: url(6ad7a9f81e3a3d0a658edde249359142.jpg);
+            border: orangered solid 5px;
+
+        }
+
+        .cuadrojugarfondo{
+            position: absolute;
+            top: 50px;
+            left: 580px;
+            background-color: lightgoldenrodyellow;
+            font-size: 60px;
+            width: 800px;
+            height: 606px;
+            border-radius: 5px; 
+            font-family: Old English Text MT;
+            padding-left:51px ;
+            padding-top:10px ;
+            padding-bottom:20px ;
+            box-sizing: border-box;
+            background-image: url(cd1c0c1fc28f2e93246d376dc8ec68fa.jpg);
+            background-size: cover;
+            border: black solid 5px;
+            opacity: 0;
+        }
+
+        .cuadrojugar{
+            position: absolute;
+            top: 100px;
+            left: 630px;
+            background-color: lightgoldenrodyellow;
+            font-size: 60px;
+            width: 700px;
+            height: 500px;
+            border-radius: 5px; 
+            font-family: Old English Text MT;
+            padding-left:51px ;
+            padding-top:10px ;
+            padding-bottom:20px ;
+            box-sizing: border-box;
+            background-image: url(images.png);
+            background-size: cover;
+            border: black solid 5px;
+            opacity: 0;
+            z-index: 20px;
+        }
+
+        .box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: black;
+            top:200px;
+            left:1210px;
+            font-size: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            box-sizing: border-box;
+            background-image: url(66160.jpg);
+            background-size: cover;
+            border: black solid 3px;
+            opacity: 0;
+        }
+        .sound{
+            position: absolute;
+            top: 658px;
+            opacity: 0;
+        }
+
+
+	</style>
+</head>
+
+
+
+<div class="a" id="sa">Restaurante</div>
+<div class="b" id="se"></div>
+<div class="c" id="si"></div>
+<div class="d" id="so" onclick="resul()">Ingresar</div>
+<div class="e" id="ver" >Menú</div>
+<div class="botonjugar" onclick="jugar()">Jugar</div>
+<div class="cuadrojugarfondo" id="cora"></div>
+<div class="cuadrojugar" id="sugar"></div>
+<div class="box" id="mover" onclick="ale()"></div>
+
+<form>
+ <input type="text" id="producto1" class="b"  placeholder="Producto ">
+ <input type="text" id="precio1" class="c"  placeholder="Precio ">
+</form>
+
+<audio src="y2mate.com - Sonido ifruit gta v online.mp3" controls class="sound" id="sonidoso"></audio>
+
+<script>
+	function resul() {
+        d=producto1.value;
+        nuevoc=" <div class='b'>"+d+"</div> ";
+        conte=ver.innerHTML+nuevoc;
+        conte= conte+nuevoc;
+        ver.innerHTML=conte;
+        console.log(conte)
+
+        d=precio1.value;
+        nuevoc=" <div class='c'>"+d+"</div> ";
+        conte=ver.innerHTML+nuevoc;
+        conte= conte+nuevoc;
+        ver.innerHTML=conte;
+        console.log(conte)
+	}
+
+    function jugar() {
+    cora.style.opacity=1;
+    sugar.style.opacity=1;
+    mover.style.opacity=1;
+    ver.style.opacity=0;
+    sa.style.opacity=0;
+    se.style.opacity=0;
+    si.style.opacity=0;
+    so.style.opacity=0;
+    producto1.style.opacity=0;
+    precio1.style.opacity=0;
+    }
+
+    function ale(event) {
+       var numx=Math.floor((Math.random() * (1231-630))+630);
+       var numy=Math.floor((Math.random() * (500-100))+100);
+
+        mover.style.left=numx+"px";
+        mover.style.top=numx+"px";
+
+        sonidoso.play();
+    }
+
+</script>
+
+</body>
+</body>
+</html>
